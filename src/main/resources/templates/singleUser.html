@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:xmlns:th="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SingleUser</title>
+</head>
+<body>
+
+    <!--<div th:text="${xxx.id+' '+xxx.name }"></div>-->
+
+    <h2 th:text="${currentUser.id+', '+currentUser.username}"></h2>
+
+    <div th:each="email : ${currentUser.emails}" th:text="${email.email}"></div>
+
+
+
+
+</body>
+</html>

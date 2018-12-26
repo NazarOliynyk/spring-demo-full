@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:xmlns:th="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>UserSaveDone</title>
+</head>
+<body>
+<h2>UserSaveDone</h2>
+
+<!--this method is obsolete however it works -->
+<!--[[${allUsers}]]-->
+
+<!--this is better way-->
+<p th:text="${allUsers}"></p>
+
+<div th:each="user : ${allUsers}">
+    <!--[[${user.id} ]]-->
+    <!--[[ ${user.name}]]-->
+
+    <p th:text="${user.id +' '+user.username}"></p>
+</div>
+
+</body>
+</html>
